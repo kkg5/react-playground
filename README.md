@@ -1,3 +1,3 @@
 # react-playground
 
-[link](https://github.io/kkg5/react-playground)
+[link](https://kkg5.github.io/react-playground/)
