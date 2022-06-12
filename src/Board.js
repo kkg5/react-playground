@@ -1,37 +1,19 @@
-const Board = ({ onDelete, boardList }) => {
+import BoardItem from "./BoardItem";
+
+const Board = ({ onEdit, onDelete, boardList }) => {
   return (
     <div className="Board">
-      <ul>
-        <li>
-          {boardList.map((it) => (
-            <div key={it.id} className="board-list-container">
-              <div>
-                <div className="content-container">
-                  <h3>{it.title}</h3>
-                  <p>{it.content}</p>
-                  <p className="day">{it.date}</p>
-                </div>
-              </div>
-              <div>
-                <div className="button-container">
-                  <button>수정</button>
-                </div>
-                <div className="button-container">
-                  <button
-                    onClick={() => {
-                      if (window.confirm("정말 삭제하시겠습니까?")) {
-                        onDelete(it.id);
-                      }
-                    }}
-                  >
-                    삭제
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </li>
-      </ul>
+      {boardList.map((it) => (
+        <BoardItem
+          key={it.id}
+          onEdit={onEdit}
+          onDelete={onDelete}
+          id={it.id}
+          title={it.title}
+          content={it.content}
+          date={it.date}
+        />
+      ))}
     </div>
   );
 };

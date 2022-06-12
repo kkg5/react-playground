@@ -40,11 +40,19 @@ function App() {
     setData(newData);
   };
 
+  const onEdit = (targetId, newContent) => {
+    setData(
+      data.map((it) =>
+        it.id === targetId ? { ...it, content: newContent } : it
+      )
+    );
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h2>{text}</h2>
-        <Board onDelete={onDelete} boardList={data} />
+        <Board onEdit={onEdit} onDelete={onDelete} boardList={data} />
       </header>
     </div>
   );
