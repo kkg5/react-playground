@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-playground/static/css/main.37da1493.css",
+    "main.js": "/react-playground/static/js/main.c2dc7891.js",
+    "index.html": "/react-playground/index.html",
+    "main.37da1493.css.map": "/react-playground/static/css/main.37da1493.css.map",
+    "main.c2dc7891.js.map": "/react-playground/static/js/main.c2dc7891.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37da1493.css",
+    "static/js/main.c2dc7891.js"
+  ]
+}
